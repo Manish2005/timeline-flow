@@ -2,15 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { TimelineFlowModule } from './timeline-flow';
+import { TimelineFlowComponent } from './timeline-flow/timeline-flow.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimelineFlowComponent
   ],
   imports: [
-    BrowserModule,
-    TimelineFlowModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
