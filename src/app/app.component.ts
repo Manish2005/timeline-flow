@@ -31,26 +31,26 @@ export class AppComponent {
   StatusValues: TimelineFlowOptions = {
     statuses: [{
       text: 'Not Started',
-      styles: { connectorColor: '', textColor: '#A5A5A5', iconClass: 'fa fa-circle-o', iconPath: '' }
+      styles: { pipeColor: '', textColor: '#A5A5A5', iconClass: 'fa fa-circle-o', iconPath: '' }
     }, {
       text: 'In progress',
-      styles: { connectorColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
+      styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
     }, {
       text: 'Completed',
-      styles: { connectorColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
+      styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
     }]
   };
 
   CustomStatusValues: TimelineFlowOptions = {
     statuses: [{
       text: 'Pending',
-      styles: { connectorColor: '#F00', textColor: '#F00', iconClass: 'fa fa-circle-o', iconPath: '' }
+      styles: { pipeColor: '#F00', textColor: '#F00', iconClass: 'fa fa-circle-o', iconPath: '' }
     }, {
       text: 'Working on It',
-      styles: { connectorColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
+      styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
     }, {
       text: 'Done',
-      styles: { connectorColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
+      styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
     }]
   };
 

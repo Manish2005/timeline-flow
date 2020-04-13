@@ -1,13 +1,13 @@
 export const DEFAULT_STATUS_VALUES: TimelineFlowOptions = {
   statuses: [{
     text: 'Not Started',
-    styles: { connectorColor: '', textColor: '#A5A5A5', iconClass: 'fa fa-circle-o', iconPath: '' }
+    styles: { pipeColor: '', textColor: '#A5A5A5', iconClass: 'fa fa-circle-o', iconPath: '' }
   }, {
     text: 'In progress',
-    styles: { connectorColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
+    styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
   }, {
     text: 'Completed',
-    styles: { connectorColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
+    styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
   }]
 };
 
@@ -21,7 +21,7 @@ export interface StatusConfig {
 }
 
 interface StatusConfigStyles {
-  connectorColor?: string;
+  pipeColor?: string;
   textColor?: string;
   iconClass?: string;
   iconPath?: string;

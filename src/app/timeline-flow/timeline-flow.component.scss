@@ -11,11 +11,11 @@ $contrastGrey: #c8c8c8;
     grid-template-columns: auto 1fr;
     min-height: 70px;
 
-    .connector-wrapper {
+    .pipe-wrapper {
       position: relative;
       padding-right: 15px;
 
-      .connector {
+      .pipe {
         position: absolute;
         left: 5px;
         top: 10px;
@@ -58,8 +58,8 @@ $contrastGrey: #c8c8c8;
 
 
     &:last-child {
-      .connector-wrapper {
-        .connector {
+      .pipe-wrapper {
+        .pipe {
           display: none;
         }
       }
@@ -79,7 +79,7 @@ $contrastGrey: #c8c8c8;
       &.edge-step {
         margin-bottom: 30px;
 
-        .connector-wrapper .connector {
+        .pipe-wrapper .pipe {
           display: inherit;
         }
       }

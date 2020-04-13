@@ -39,9 +39,9 @@ export class TimelineFlowComponent {
             styles[statusRec.styles.iconClass] = true;
           }
           break;
-        case 'connector-styles':
-          if (statusRec.styles.connectorColor) {
-            styles['background-color'] = statusRec.styles.connectorColor;
+        case 'pipe-styles':
+          if (statusRec.styles.pipeColor) {
+            styles['background-color'] = statusRec.styles.pipeColor;
           }
           break;
       }
