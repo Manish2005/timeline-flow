@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StepsData } from './timeline-flow/timeline-flow.options';
 
 @Component({
   selector: 'app-root',
@@ -6,11 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  statusData: any[] = [{
-    step: 'Step 1',
+  statusData: StepsData[] = [{
+    step: 'This is Step 1',
     status: 'Completed'
   }, {
-    step: 'Step 2',
+    step: 'This is Step 2',
+    subtext: 'This is a dummy text for sub title for this step. This should be show below the title',
     status: 'Completed'
   }, {
     step: 'Step 3',

@@ -26,7 +26,6 @@ export class TimelineFlowComponent {
           if (statusRec.styles.textColor) {
             styles['color'] = statusRec.styles.textColor;
           }
-          styles['font-weight'] = 'bold';
           break;
         case 'text-styles':
           if (statusRec.styles.textColor) {
@@ -40,7 +39,7 @@ export class TimelineFlowComponent {
           break;
         case 'connector-styles':
           if (statusRec.styles.borderColor) {
-            styles['border-left-color'] = statusRec.styles.borderColor;
+            styles['background-color'] = statusRec.styles.borderColor;
           }
           break;
       }
