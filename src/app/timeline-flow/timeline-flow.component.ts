@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DEFAULT_STATUS_VALUES, TimelineFlowOptions, StepsData } from './timeline-flow.options';
+import { DEFAULT_STATUS_VALUES, TimelineFlowOptions, StepsData, StatusConfig } from './timeline-flow.options';
 
 @Component({
   selector: 'app-timeline-flow',
@@ -10,12 +10,14 @@ export class TimelineFlowComponent {
 
   @Input() data: StepsData[] = [];
   @Input() options: TimelineFlowOptions = DEFAULT_STATUS_VALUES;
+  @Input() topEdge = false;
+  @Input() bottomEdge = false;
 
   constructor() {
   }
 
   getStyles(step, type) {
-    const statusRec: any = this.options.statuses.find(item => item.text === step.status);
+    const statusRec: StatusConfig = this.options.statuses.find(item => item.text === step.status);
     const styles = {};
     if (statusRec && statusRec.styles) {
       switch (type) {
@@ -38,8 +40,8 @@ export class TimelineFlowComponent {
           }
           break;
         case 'connector-styles':
-          if (statusRec.styles.borderColor) {
-            styles['background-color'] = statusRec.styles.borderColor;
+          if (statusRec.styles.connectorColor) {
+            styles['background-color'] = statusRec.styles.connectorColor;
           }
           break;
       }

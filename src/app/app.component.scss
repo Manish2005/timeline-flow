@@ -1,0 +1,15 @@
+.examples {
+  display: grid;
+
+  @media (min-width: 800px) {
+    grid-template-columns: 400px 400px;
+  }
+
+  @media (min-width: 1210px) {
+    grid-template-columns: 400px 400px 400px;
+  }
+}
+
+app-timeline-flow {
+  border: 1px dotted #ccc;
+}

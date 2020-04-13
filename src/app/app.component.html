@@ -1,3 +1,21 @@
 <h2>Angular Timeline Component</h2>
-<app-timeline-flow [data]="statusData" style="width: 400px; border:1px dotted #ccc;display: inline-block;">
-</app-timeline-flow>
+<div class="examples">
+  <div>
+    <h3>Default</h3>
+    <app-timeline-flow [data]="statusData" style="width: 400px;display: inline-block;">
+    </app-timeline-flow>
+  </div>
+  <div>
+    <h3>With Edges</h3>
+    <app-timeline-flow [data]="statusData" [options]="StatusValues" [topEdge]="true" [bottomEdge]="true"
+      style="width: 400px; display: inline-block;">
+    </app-timeline-flow>
+  </div>
+  <div>
+    <h3>Custom Config</h3>
+    <app-timeline-flow [data]="CustomStatusData" [options]="CustomStatusValues"
+      style="width: 400px; display: inline-block;">
+    </app-timeline-flow>
+  </div>
+</div>
+<hr>

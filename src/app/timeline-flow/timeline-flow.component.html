@@ -1,12 +1,11 @@
 <div class="timeline-flow-wrapper">
-  <div class="step edge-step" *ngIf="options.showTopEdge">
+  <div class="step edge-step" *ngIf="topEdge">
     <div class="connector-wrapper">
       <span class="connector"></span>
     </div>
     <div class="status-text"></div>
   </div>
-  <div class="step" *ngFor="let step of data; let i=index"
-    [ngClass]="{'edge-step': i === data.length-1 && options.showBottomEdge}">
+  <div class="step" *ngFor="let step of data; let i=index" [ngClass]="{'edge-step': i === data.length-1 && bottomEdge}">
     <div class="connector-wrapper">
       <span class="connector" [ngStyle]="getStyles(step, 'connector-styles')"></span>
       <span class="status-icon" [ngClass]="getStyles(step, 'icon-class')"
