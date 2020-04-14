@@ -7,15 +7,14 @@
   </div>
   <div>
     <h3>With Edges</h3>
-    <app-timeline-flow [data]="statusData" [options]="StatusValues" [topEdge]="true" [bottomEdge]="true"
+    <app-timeline-flow [data]="statusData" [statuses]="StatusValues" [topEdge]="true" [bottomEdge]="true"
       style="width: 400px; display: inline-block;">
     </app-timeline-flow>
   </div>
   <div>
     <h3>Custom Config</h3>
-    <app-timeline-flow [data]="CustomStatusData" [options]="CustomStatusValues"
+    <app-timeline-flow [data]="CustomStatusData" [statuses]="CustomStatusValues"
       style="width: 400px; display: inline-block;">
     </app-timeline-flow>
   </div>
 </div>
-<hr>

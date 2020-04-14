@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { DEFAULT_STATUS_VALUES, TimelineFlowOptions, StepsData, StatusConfig } from './timeline-flow.options';
+import { DEFAULT_STATUS_VALUES, StepsData, StatusConfig } from './timeline-flow.options';
 
 @Component({
   selector: 'app-timeline-flow',
@@ -9,7 +9,7 @@ import { DEFAULT_STATUS_VALUES, TimelineFlowOptions, StepsData, StatusConfig } f
 export class TimelineFlowComponent {
 
   @Input() data: StepsData[] = [];
-  @Input() options: TimelineFlowOptions = DEFAULT_STATUS_VALUES;
+  @Input() statuses: StatusConfig[] = DEFAULT_STATUS_VALUES;
   @Input() topEdge = false;
   @Input() bottomEdge = false;
 
@@ -17,7 +17,7 @@ export class TimelineFlowComponent {
   }
 
   getStyles(step, type) {
-    const statusRec: StatusConfig = this.options.statuses.find(item => item.text === step.status);
+    const statusRec: StatusConfig = this.statuses.find(item => item.text === step.status);
     const styles = {};
     if (statusRec && statusRec.styles) {
       switch (type) {
@@ -29,14 +29,14 @@ export class TimelineFlowComponent {
             styles['color'] = statusRec.styles.textColor;
           }
           break;
-        case 'text-styles':
-          if (statusRec.styles.textColor) {
-            styles['color'] = statusRec.styles.textColor;
-          }
-          break;
         case 'icon-class':
           if (statusRec.styles.iconClass) {
             styles[statusRec.styles.iconClass] = true;
+          }
+          break;
+        case 'text-styles':
+          if (statusRec.styles.textColor) {
+            styles['color'] = statusRec.styles.textColor;
           }
           break;
         case 'pipe-styles':

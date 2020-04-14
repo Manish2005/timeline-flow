@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StepsData, TimelineFlowOptions } from './timeline-flow/timeline-flow.options';
+import { StepsData, StatusConfig } from './timeline-flow/timeline-flow.options';
 
 @Component({
   selector: 'app-root',
@@ -28,31 +28,27 @@ export class AppComponent {
     status: 'Not Started'
   }];
 
-  StatusValues: TimelineFlowOptions = {
-    statuses: [{
-      text: 'Not Started',
-      styles: { pipeColor: '', textColor: '#A5A5A5', iconClass: 'fa fa-circle-o', iconPath: '' }
-    }, {
-      text: 'In progress',
-      styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
-    }, {
-      text: 'Completed',
-      styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
-    }]
-  };
+  StatusValues: StatusConfig[] = [{
+    text: 'Not Started',
+    styles: { pipeColor: '', textColor: '#A5A5A5', iconClass: 'fa fa-circle-o', iconPath: '' }
+  }, {
+    text: 'In progress',
+    styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
+  }, {
+    text: 'Completed',
+    styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
+  }];
 
-  CustomStatusValues: TimelineFlowOptions = {
-    statuses: [{
-      text: 'Pending',
-      styles: { pipeColor: '#F00', textColor: '#F00', iconClass: 'fa fa-circle-o', iconPath: '' }
-    }, {
-      text: 'Working on It',
-      styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
-    }, {
-      text: 'Done',
-      styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
-    }]
-  };
+  CustomStatusValues: StatusConfig[] = [{
+    text: 'Pending',
+    styles: { pipeColor: '#F00', textColor: '#F00', iconClass: 'fa fa-circle-o', iconPath: '' }
+  }, {
+    text: 'Working on It',
+    styles: { pipeColor: '', textColor: '#0077C8', iconClass: 'fa fa-exclamation-circle', iconPath: '' }
+  }, {
+    text: 'Done',
+    styles: { pipeColor: '#0077C8', textColor: '#49AF57', iconClass: 'fa fa-check-circle', iconPath: '' }
+  }];
 
   CustomStatusData: StepsData[] = [{
     step: 'This is Step 1',
